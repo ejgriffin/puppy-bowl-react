@@ -1,42 +1,51 @@
-#root {
+* {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  color: yellow;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+html {
+  background-color: green;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  color: yellow;
+  font-style: italic;
+  text-decoration: underline;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+p {
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.card {
-  padding: 2em;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(6, 25%);
+  grid-column-gap: 10px;
+  justify-content: space-between;
+  filter: drop-shadow(2px 2px);
+  width: 70em;
+  padding-left: 3em;
+  padding-top: 3em;
 }
 
-.read-the-docs {
-  color: #888;
+html {
+  /* background-image: url(https://t4.ftcdn.net/jpg/01/22/87/11/360_F_122871183_5etdY3FDi51E5P2733vnTaxxMhbTW8eR.jpg); */
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.form {
+  color: white;
+  font-size: 18px;
+  filter: drop-shadow(black 2px 2px);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 1vw;
 }
