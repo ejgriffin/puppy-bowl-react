@@ -1,13 +1,10 @@
-* {
+#root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
-  color: yellow;
-}
 
-html {
-  background-color: green;
+  box-sizing: border-box;
 }
 
 h2 {
@@ -17,35 +14,46 @@ h2 {
   position: relative;
 }
 
-p {
+/* p {
   color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
+} */
 
 .cards {
   display: grid;
   grid-template-columns: repeat(6, 25%);
-  grid-column-gap: 10px;
-  justify-content: space-between;
+  grid-column-gap: 5px;
+  justify-content: space-around;
   filter: drop-shadow(2px 2px);
   width: 70em;
-  padding-left: 3em;
-  padding-top: 3em;
+  padding-left: 3rem;
+  padding-top: 3rem;
 }
 
 html {
-  /* background-image: url(https://t4.ftcdn.net/jpg/01/22/87/11/360_F_122871183_5etdY3FDi51E5P2733vnTaxxMhbTW8eR.jpg); */
+  background-image: url(https://t4.ftcdn.net/jpg/01/22/87/11/360_F_122871183_5etdY3FDi51E5P2733vnTaxxMhbTW8eR.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
-.form {
+button {
+  background-color: lightgreen;
+  color: blue;
+  font-size: 1em;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+
+/* .form {
   color: white;
   font-size: 18px;
   filter: drop-shadow(black 2px 2px);
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 1vw;
-}
+} */

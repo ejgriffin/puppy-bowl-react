@@ -3,7 +3,38 @@
 //details button should link to SinglePlayer component
 //Add form for adding new puppy player with input for name and breed
 //Add Search Bar with ability to Search for player. (Google it)
+import { useEffect, useState } from "react";
+const cohortName = "2308-FTB-ET-WEB-PT";
+const APIURL = `https://fsa-puppy-bowl.herokuapp.com/api/${cohortName}`;
+import PlayerCards from "./PlayerCards";
 
 export default function AllPlayers() {
-  return <>All Players</>;
+  const [puppies, setPuppies] = useState([]);
+
+  useEffect(() => {
+    async function fetchPuppies() {
+      try {
+        const response = await fetch(`${APIURL}/players`);
+        const result = await response.json();
+        console.log(result);
+        setPuppies(result.data.players);
+
+        console.log("puppies", puppies);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchPuppies();
+  }, [puppies]);
+  // useEffect(() => {
+  //   // This will log the updated state whenever puppies changes
+  //   console.log("puppies", puppies);
+  // }, [puppies]);
+  return (
+    <div className="cards">
+      {puppies.map((puppy) => (
+        <PlayerCards key={puppy.id} player={puppy} />
+      ))}
+    </div>
+  );
 }
