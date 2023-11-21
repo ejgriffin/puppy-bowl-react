@@ -18,18 +18,13 @@ export default function AllPlayers() {
         const result = await response.json();
         console.log(result);
         setPuppies(result.data.players);
-
-        console.log("puppies", puppies);
       } catch (error) {
         console.error(error);
       }
     }
     fetchPuppies();
-  }, [puppies]);
-  // useEffect(() => {
-  //   // This will log the updated state whenever puppies changes
-  //   console.log("puppies", puppies);
-  // }, [puppies]);
+  }, []);
+
   return (
     <div className="cards">
       {puppies.map((puppy) => (
