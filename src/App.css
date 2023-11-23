@@ -33,11 +33,11 @@ p {
   filter: drop-shadow(1px 1px);
   width: 70em;
   padding-left: 3rem;
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 
 html {
-  background-image: url(https://t4.ftcdn.net/jpg/01/22/87/11/360_F_122871183_5etdY3FDi51E5P2733vnTaxxMhbTW8eR.jpg);
+  background-image: url(assets/pbowlbg.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -74,7 +74,7 @@ button:hover {
   color: white;
   font-size: 20px;
   filter: drop-shadow(black 2px 2px);
-  padding-top: 5px;
+  padding-top: 1px;
   padding-bottom: 5px;
   padding-left: 1vw;
 }

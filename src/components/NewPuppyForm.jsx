@@ -2,12 +2,13 @@ import { useState } from "react";
 const cohortName = "2308-FTB-ET-WEB-PT";
 const APIURL = `https://fsa-puppy-bowl.herokuapp.com/api/${cohortName}`;
 
-export default function NewPuppyForm() {
+export default function NewPuppyForm({ fetchPuppies }) {
   const [name, setName] = useState("");
   const [breed, setBreed] = useState("");
   const [error, setError] = useState(null);
 
-  async function handleSubmit(event) {
+  async function handleSubmit(e) {
+    e.preventDefault();
     try {
       const response = await fetch(`${APIURL}/players`, {
         method: "POST",
@@ -15,13 +16,15 @@ export default function NewPuppyForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: "Rufus",
-          breed: "Irish Setter",
+          name: name,
+          breed: breed,
         }),
       });
 
       const result = await response.json();
       console.log(result);
+      await fetchPuppies();
+      return result;
     } catch (err) {
       console.error(err);
     }
@@ -39,7 +42,7 @@ export default function NewPuppyForm() {
           Breed:{" "}
           <input value={breed} onChange={(e) => setBreed(e.target.value)} />
         </label>
-        <button className="submit-button">Submit</button>
+        <button className="submit-button">Add Puppy</button>
       </form>
     </div>
   );
