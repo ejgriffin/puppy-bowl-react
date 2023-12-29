@@ -121,3 +121,12 @@ label {
   font-size: 15px;
   margin-left: 5px;
 }
+
+.search {
+  color: white;
+  font-size: 20px;
+  filter: drop-shadow(black 2px 2px);
+  padding-top: 1px;
+  padding-bottom: 5px;
+  padding-left: 1vw;
+}
